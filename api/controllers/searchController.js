@@ -3,7 +3,7 @@ exports.search = function (req, res) {
   mnc = parseInt(req.query.mnc);
   ans = null;
   var fs = require('fs');
-  data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+  data = JSON.parse(fs.readFileSync('./Data.json', 'utf8'));
   if (mcc && mnc) {
     data.forEach((item) => {
       if (item.mcc == mcc && item.mnc == mnc) {
